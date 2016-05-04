@@ -29,6 +29,9 @@
 		69B674EE1CCE90F70071F19A /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B674ED1CCE90F70071F19A /* BaseService.swift */; };
 		69B674F01CCE92D70071F19A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B674EF1CCE92D70071F19A /* LoginViewController.swift */; };
 		69B674F21CCE92EA0071F19A /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B674F11CCE92EA0071F19A /* CreateAccountViewController.swift */; };
+		69DC88511CD9E4220037CA97 /* PlayersViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DC884E1CD9E4220037CA97 /* PlayersViewCell.swift */; };
+		69DC88521CD9E4220037CA97 /* PlayerColViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DC884F1CD9E4220037CA97 /* PlayerColViewController.swift */; };
+		69DC88531CD9E4220037CA97 /* PlayersInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DC88501CD9E4220037CA97 /* PlayersInfoViewController.swift */; };
 		E64351621CD8104E0041DE20 /* TeamSumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64351611CD8104E0041DE20 /* TeamSumViewController.swift */; };
 		E662B72B1CD70AD300AF09EE /* SearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E662B72A1CD70AD300AF09EE /* SearchTable.swift */; };
 		E69D7D951CD917C2003DB36C /* FavesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69D7D941CD917C2003DB36C /* FavesViewController.swift */; };
@@ -66,6 +69,9 @@
 		69B674ED1CCE90F70071F19A /* BaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		69B674EF1CCE92D70071F19A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		69B674F11CCE92EA0071F19A /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		69DC884E1CD9E4220037CA97 /* PlayersViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersViewCell.swift; sourceTree = "<group>"; };
+		69DC884F1CD9E4220037CA97 /* PlayerColViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerColViewController.swift; sourceTree = "<group>"; };
+		69DC88501CD9E4220037CA97 /* PlayersInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersInfoViewController.swift; sourceTree = "<group>"; };
 		E64351611CD8104E0041DE20 /* TeamSumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamSumViewController.swift; sourceTree = "<group>"; };
 		E662B72A1CD70AD300AF09EE /* SearchTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTable.swift; sourceTree = "<group>"; };
 		E69D7D941CD917C2003DB36C /* FavesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavesViewController.swift; sourceTree = "<group>"; };
@@ -149,13 +155,6 @@
 		E662B7291CD70A5700AF09EE /* images */ = {
 			isa = PBXGroup;
 			children = (
-				EC05DE661CD9AE02002196E5 /* chelsea.png */,
-				EC05DE6A1CD9AFF0002196E5 /* LiverpoolLogo.png */,
-				EC05DE6C1CD9B094002196E5 /* ManchesterCity.png */,
-				EC05DE6E1CD9B10E002196E5 /* ManchesterUnited.png */,
-				EC05DE701CD9B1C3002196E5 /* Hotspur.png */,
-				EC05DE681CD9AF56002196E5 /* LeicesterCityLogo.png */,
-				EC05DE641CD9A628002196E5 /* Arsenal.png */,
 				691CFC1A1CD5A16B007E26C2 /* Football 2 Filled-50.png */,
 				691CFC1E1CD5A33F007E26C2 /* Add to Favorites Filled-30.png */,
 				691CFC201CD5A3D1007E26C2 /* Binoculars-30.png */,
@@ -173,6 +172,9 @@
 		E69D7D921CD914F9003DB36C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				69DC884E1CD9E4220037CA97 /* PlayersViewCell.swift */,
+				69DC884F1CD9E4220037CA97 /* PlayerColViewController.swift */,
+				69DC88501CD9E4220037CA97 /* PlayersInfoViewController.swift */,
 				69203FC61CD82318009A9B18 /* MyProfileViewController.swift */,
 				69B674EF1CCE92D70071F19A /* LoginViewController.swift */,
 				EC3D50A51CD1A8FD00FD20C6 /* BrowseTeamsViewController.swift */,
@@ -260,22 +262,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				691CFC2B1CD5E36E007E26C2 /* Football 2 Filled-30.png in Resources */,
-				EC05DE651CD9A628002196E5 /* Arsenal.png in Resources */,
 				691CFC231CD5A654007E26C2 /* baseball_field_grass_field_wal_2560x1600_wallpaperhi-com.jpg in Resources */,
-				EC05DE671CD9AE02002196E5 /* chelsea.png in Resources */,
 				691CFC1D1CD5A27C007E26C2 /* About Us Male-30.png in Resources */,
 				691CFC2A1CD5E36E007E26C2 /* Stadium-30.png in Resources */,
 				691428ED1CCAEB5100AEB132 /* LaunchScreen.storyboard in Resources */,
 				691CFC2F1CD5E4EC007E26C2 /* Calendar-30.png in Resources */,
 				691CFC211CD5A3D1007E26C2 /* Binoculars-30.png in Resources */,
 				691428EA1CCAEB5100AEB132 /* Assets.xcassets in Resources */,
-				EC05DE6B1CD9AFF0002196E5 /* LiverpoolLogo.png in Resources */,
 				691CFC291CD5E36E007E26C2 /* Football-30.png in Resources */,
-				EC05DE6D1CD9B094002196E5 /* ManchesterCity.png in Resources */,
-				EC05DE6F1CD9B10E002196E5 /* ManchesterUnited.png in Resources */,
 				691CFC1B1CD5A16B007E26C2 /* Football 2 Filled-50.png in Resources */,
-				EC05DE711CD9B1C3002196E5 /* Hotspur.png in Resources */,
-				EC05DE691CD9AF56002196E5 /* LeicesterCityLogo.png in Resources */,
 				691CFC2E1CD5E4EC007E26C2 /* Leaderboard Filled-30.png in Resources */,
 				691CFC1F1CD5A33F007E26C2 /* Add to Favorites Filled-30.png in Resources */,
 				691428E81CCAEB5100AEB132 /* Main.storyboard in Resources */,
@@ -340,7 +335,9 @@
 				E69D7D951CD917C2003DB36C /* FavesViewController.swift in Sources */,
 				69203FC71CD82318009A9B18 /* MyProfileViewController.swift in Sources */,
 				EC3D50A81CD1AA0500FD20C6 /* TeamStatsViewController.swift in Sources */,
+				69DC88521CD9E4220037CA97 /* PlayerColViewController.swift in Sources */,
 				69B674F21CCE92EA0071F19A /* CreateAccountViewController.swift in Sources */,
+				69DC88531CD9E4220037CA97 /* PlayersInfoViewController.swift in Sources */,
 				E662B72B1CD70AD300AF09EE /* SearchTable.swift in Sources */,
 				69B674F01CCE92D70071F19A /* LoginViewController.swift in Sources */,
 				691428E31CCAEB5100AEB132 /* AppDelegate.swift in Sources */,
@@ -350,6 +347,7 @@
 				E64351621CD8104E0041DE20 /* TeamSumViewController.swift in Sources */,
 				E69D7D971CD94712003DB36C /* StatsViewController.swift in Sources */,
 				EC3D50A41CD158BD00FD20C6 /* HomeScreenViewController.swift in Sources */,
+				69DC88511CD9E4220037CA97 /* PlayersViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
