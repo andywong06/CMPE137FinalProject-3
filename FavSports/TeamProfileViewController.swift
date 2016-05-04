@@ -19,10 +19,12 @@ class TeamProfileViewController : UIViewController{
     
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+    
         
         if (SELECTED_TEAM == "Arsenal"){
             teamName.text = SELECTED_TEAM
-            teamLogo.image = UIImage (named: "Arsenal")
+            teamLogo.image = UIImage (named: "arsenal")
             teamStadium.image = UIImage (named: "arsenal_ven")
             
         }
@@ -59,6 +61,8 @@ class TeamProfileViewController : UIViewController{
        
     }
     
+ 
+
   
     
     

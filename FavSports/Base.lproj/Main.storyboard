@@ -550,11 +550,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pEv-wR-hyH">
-                                <rect key="frame" x="60" y="278" width="480" height="256"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="256" id="Rc5-kW-oaG"/>
-                                </constraints>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pEv-wR-hyH">
+                                <rect key="frame" x="20" y="318" width="560" height="216"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="WwW-zl-v8W" appends="YES" id="jXo-4A-apz"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqV-Pj-imq">
                                 <rect key="frame" x="20" y="72" width="560" height="41"/>
@@ -571,15 +572,41 @@
                                 <color key="shadowColor" cocoaTouchSystemColor="lightTextColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="651-OZ-U0M">
-                                <rect key="frame" x="60" y="132" width="240" height="128"/>
+                                <rect key="frame" x="242" y="106" width="116" height="96"/>
+                                <gestureRecognizers/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Team Established:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXz-Iz-C42">
+                                <rect key="frame" x="20" y="202" width="140" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Manager:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xkd-kN-qM7">
+                                <rect key="frame" x="22" y="231" width="73" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Stadium:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r5c-XY-VT1">
+                                <rect key="frame" x="20" y="289" width="68" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Nickname:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPZ-H0-Qy6">
+                                <rect key="frame" x="22" y="260" width="81" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="pEv-wR-hyH" firstAttribute="leading" secondItem="wpZ-Kx-Y1g" secondAttribute="leadingMargin" constant="40" id="Bqu-ps-NhX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="wqV-Pj-imq" secondAttribute="trailing" id="IXB-cK-dXX"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="pEv-wR-hyH" secondAttribute="trailing" constant="40" id="MBk-Mc-Csr"/>
-                            <constraint firstItem="uaX-0l-Wly" firstAttribute="top" secondItem="pEv-wR-hyH" secondAttribute="bottom" constant="17" id="UvC-mU-xfC"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="QXz-Iz-C42" secondAttribute="leading" id="JOp-AP-xOx"/>
+                            <constraint firstItem="DPZ-H0-Qy6" firstAttribute="leading" secondItem="wpZ-Kx-Y1g" secondAttribute="leadingMargin" constant="2" id="gbd-lr-Ej8"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="r5c-XY-VT1" secondAttribute="leading" id="iSh-lq-f4o"/>
+                            <constraint firstItem="Xkd-kN-qM7" firstAttribute="centerY" secondItem="wpZ-Kx-Y1g" secondAttribute="centerY" id="o2J-Hu-gqc"/>
                             <constraint firstItem="wqV-Pj-imq" firstAttribute="top" secondItem="ieD-Y4-NMk" secondAttribute="bottom" constant="8" id="qYm-Z0-QwK"/>
                             <constraint firstAttribute="leadingMargin" secondItem="wqV-Pj-imq" secondAttribute="leading" id="wWd-Sg-Vff"/>
                         </constraints>
@@ -592,8 +619,13 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uGY-Ds-zkG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="WwW-zl-v8W">
+                    <connections>
+                        <segue destination="swS-OU-jMZ" kind="presentation" id="Vrr-a3-vh0"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="382" y="1205"/>
+            <point key="canvasLocation" x="388" y="1207"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="znl-sK-jDb">
@@ -984,6 +1016,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ss3-eB-mX5"/>
+        <segue reference="Vrr-a3-vh0"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.23018704349999999" green="0.77713233230000001" blue="0.31589496140000001" alpha="1" colorSpace="calibratedRGB"/>
 </document>
