@@ -96,6 +96,7 @@ class PlayerColViewController: UIViewController, UICollectionViewDelegate, UICol
             let vc = segue.destinationViewController as! PlayersInfoViewController
             vc.image = self.playerImageArray[indexPath.row]!
             vc.title = self.playerNames[indexPath.row]
+            vc.name = self.playerNames[indexPath.row]
         
         }
     }
