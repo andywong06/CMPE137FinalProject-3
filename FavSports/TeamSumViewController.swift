@@ -8,42 +8,16 @@
 
 import UIKit
 
-extension UIColor {
-    convenience init(red: Int, green: Int, blue: Int) {
-        let newRed = CGFloat(red)/255
-        let newGreen = CGFloat(green)/255
-        let newBlue = CGFloat(blue)/255
-        
-        self.init(red: newRed, green: newGreen, blue: newBlue, alpha: 1.0)
-    }
-}
+
+
 class TeamSumViewController: UIViewController {
 
     private var message: String = ""
     var toRecieve: String = ""
+    var teamSummary = [String: (String, String)]()
+    var names = ["Arsenal", "Chelsea","Leicester City","Liverpool", "Manchester City", "Manchester United","Tottenham Hotspur"]
     
-    let ArseGold = UIColor(red: 201, green: 166, blue: 26)
-    let ArseBlue = UIColor(red: 0, green: 0, blue: 102)
-    
-    let ChelsBlue = UIColor(red: 26, green: 1, blue: 201)
-    let ChelsRed = UIColor(red:255, green: 0, blue: 0)
-    //use ArseGold for chelse
-    
-    //use ChelseBlue for LeicBlue
-    let LeicYellow = UIColor(red: 255, green: 235, blue: 62)
-    
-    let LivRed = UIColor(red: 204, green: 0, blue: 0)
-    let LivCyan = UIColor(red: 0, green: 153, blue: 153)
-    
-    let ManCGold = UIColor(red: 250, green: 221, blue: 75)
-    let ManCLightBlue = UIColor(red: 51, green: 153, blue: 255)
-    
-    //Use ChelsRed for ManURed
-    let ManUYellow = UIColor(red: 255, green: 237, blue: 65)
-    
-    //Use ArseBlue for TottBlue
-    
-    
+
     @IBOutlet weak var Name: UILabel!
    
    
@@ -55,16 +29,58 @@ class TeamSumViewController: UIViewController {
     
     @IBOutlet weak var Established: UILabel!
     
+    
+    @IBOutlet weak var nname: UILabel!
+    
+    
+    @IBOutlet weak var year: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        teamInfo["Arsenal"] = Arsenal
+        teamInfo["Chelsea"] = Chelsea
+        teamInfo["Leicester City"] = LeicesterCity
+        teamInfo["Liverpool"] = Liverpool
+        teamInfo["Manchester City"] = ManchesterCity
+        teamInfo["Manchester United"] = ManchesterUnited
+        teamInfo["Tottenham Hotspur"] = TottenhamHotspur
+        
+        
         message = toRecieve
         Name.text = message
         
-        TeamLogo.image = UIImage(named: "Hotspur.png")
+        if teamSummary.isEmpty {
+            CLUBS_REF.observeEventType(.Value, withBlock: { snapshot in
+                var teams = [String: (String, String)]()
+                var counter = 0
+                for team in snapshot.children {
+                    let name = team.value["Nickname"] as! String
+                    let year = team.value["Year"] as! String
+                    print("adding name: \(name) and year \(year) to \(self.names[counter])")
+                    teams[self.names[counter]] = (name, year)
+                    counter += 1
+                }
+                self.teamSummary = teams
+                self.viewDidLoad()
+            })
+        }
+        print("Nicknames: ")
+        for (name, year) in teamSummary{
+            
+            print("team nickname: \(name) and year established \(year)")
+        }
+        TeamLogo.image = UIImage(named: teamInfo[message]!.2)
         Name.textColor = UIColor.whiteColor()
-        Nickname.textColor = UIColor.redColor()
-        Established.textColor = ArseGold
-       self.view.backgroundColor = UIColor.whiteColor()
+        if(!teamSummary.isEmpty){
+            nname.text = teamSummary[message]?.0
+            nname.textColor = teamInfo[message]?.0
+            year.text = teamSummary[message]?.1
+            year.textColor = teamInfo[message]?.0
+        }
+        Nickname.textColor = teamInfo[message]?.0
+        Established.textColor = teamInfo[message]?.0
+        self.view.backgroundColor = teamInfo[message]?.1
+
     }
 
     override func didReceiveMemoryWarning() {

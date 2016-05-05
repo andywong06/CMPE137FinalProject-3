@@ -31,6 +31,47 @@ var CURRENT_USER: Firebase{ // save unique identifier for user that is logged in
     return current_user
     
 }
+extension UIColor {
+    convenience init(red: Int, green: Int, blue: Int) {
+        let newRed = CGFloat(red)/255
+        let newGreen = CGFloat(green)/255
+        let newBlue = CGFloat(blue)/255
+        
+        self.init(red: newRed, green: newGreen, blue: newBlue, alpha: 1.0)
+    }
+}
+private var message: String = ""
+var toRecieve: String = ""
+
+let ArseGold = UIColor(red: 201, green: 166, blue: 26)
+let ArseBlue = UIColor(red: 0, green: 0, blue: 102)
+
+let ChelsBlue = UIColor(red: 26, green: 1, blue: 201)
+let ChelsRed = UIColor(red:255, green: 0, blue: 0)
+//use ArseGold for chelse
+
+//use ChelseBlue for LeicBlue
+let LeicYellow = UIColor(red: 255, green: 235, blue: 62)
+
+let LivRed = UIColor(red: 204, green: 0, blue: 0)
+let LivCyan = UIColor(red: 0, green: 153, blue: 153)
+
+let ManCGold = UIColor(red: 250, green: 221, blue: 75)
+let ManCLightBlue = UIColor(red: 51, green: 153, blue: 255)
+
+//Use ChelsRed for ManURed
+let ManUYellow = UIColor(red: 255, green: 237, blue: 65)
+
+//Use ArseBlue for TottBlue
+
+var teamInfo = [String: (UIColor, UIColor, String)]()
+let Arsenal = (ArseGold, ArseBlue, "Arsenal.png")
+let Chelsea = (ChelsBlue, ChelsRed, "chelsea.png")
+let LeicesterCity = (ChelsBlue, LeicYellow, "LeicesterCityLogo.png")
+let Liverpool = (LivRed, LivCyan, "LiverpoolLogo.png")
+let ManchesterCity = (ManCGold, ManCLightBlue, "ManchesterCity.png")
+let ManchesterUnited = (ChelsRed, ManUYellow, "ManchesterUnited.png")
+let TottenhamHotspur = (ArseBlue, UIColor.whiteColor(), "Hotspur.png")
 
 var CURRENT_USER_UID: String = ""
 var SELECTED_TEAM: String = ""
