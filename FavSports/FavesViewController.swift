@@ -10,14 +10,19 @@ import Firebase
 import UIKit
 
 class FavesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+    
     let cellIdentifier = "CellIdentifier2"
     
     var categorizedTeams = [String: [String]]()
     
     var faveTeams = [String]()
     
+    var DELETE_STATE = false
+    
     @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var deleteButtton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +31,8 @@ class FavesViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        DELETE_STATE = false
+        deleteButtton.setTitle("Delete", forState: .Normal)
         faveTeams = []
         let uid = FIREBASE_REF.authData.uid
         let user_ref_local = FAVES_REF.childByAppendingPath(uid)
@@ -87,6 +94,7 @@ class FavesViewController: UIViewController, UITableViewDataSource, UITableViewD
             
             // Configure Cell
             cell.textLabel?.text = team
+            cell.textLabel?.textColor = UIColor.whiteColor()
         }
         
         
@@ -127,33 +135,82 @@ class FavesViewController: UIViewController, UITableViewDataSource, UITableViewD
         toggleCellCheckbox(cell, teamName: teamName)
     }
     
+    func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        
+        if let view = view as? UITableViewHeaderFooterView {
+            view.textLabel!.backgroundColor = UIColor.clearColor()
+            view.textLabel!.textColor = UIColor.whiteColor()
+        }
+        
+    }
+    
     var message:String = ""
     func toggleCellCheckbox(cell: UITableViewCell, teamName: String) {
-        SELECTED_TEAM = teamName
-        //message = teamName
-        self.performSegueWithIdentifier("showTeamProfile", sender: self)
+        if (DELETE_STATE) {
+            let alert = UIAlertController(title: "Delete", message: "Are you sure you want to delete \(teamName) from Faves?", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            // add the actions (buttons)
+            alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.Default, handler: {action in self.deleteTeam(teamName)}))
+            alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
+            
+            // show the alert
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+        else {
+            SELECTED_TEAM = teamName
+            self.performSegueWithIdentifier("showTeamProfile", sender: self)
+        }
+    }
+    
+    func deleteTeam(team: String) {
+        USER_REF.childByAppendingPath(team).removeValue()
+        faveTeams = []
+        let uid = FIREBASE_REF.authData.uid
+        let user_ref_local = FAVES_REF.childByAppendingPath(uid)
+        user_ref_local.observeEventType(.ChildAdded, withBlock: { snapshot in
+            //var newTeams = [String]()
+            let name = snapshot.key
+            self.faveTeams.append(name)
+            
+            //self.faveTeams = newTeams
+            self.categorizedTeams = self.categorize(self.faveTeams)
+            self.tableView.reloadData()
+        })
+    }
+    
+    @IBAction func deleteButtonAction(sender: UIButton) {
+        if DELETE_STATE {
+            DELETE_STATE = false
+            sender.setTitle("Delete", forState: .Normal)
+        }
+        else {
+            DELETE_STATE = true
+            sender.setTitle("Cancel", forState: .Normal)
+        }
+        
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         //let secondVC: TeamSumViewController = segue.destinationViewController as! TeamSumViewController
         //secondVC.toRecieve = message
     }
+    
 
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

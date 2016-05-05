@@ -68,13 +68,9 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
         if error == nil {
             //FIREBASE_REF.childByAppendingPath("Faves")
-            let accessToken = FBSDKAccessToken.currentAccessToken().tokenString
-            FIREBASE_REF.authWithOAuthProvider("facebook", token: accessToken,
-                                               withCompletionBlock: { error, authData in
-                                                CURRENT_USER_UID = authData.uid
-            })
+
             
-            self.performSegueWithIdentifier("showHome", sender: self)
+            //self.performSegueWithIdentifier("showHome", sender: self)
             print("Log in complete")
             
             
