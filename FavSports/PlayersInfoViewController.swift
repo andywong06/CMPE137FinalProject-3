@@ -23,6 +23,7 @@ class PlayersInfoViewController: UIViewController {
     
     @IBOutlet weak var playerPosition: UIButton!
     
+    @IBOutlet weak var playerKit: UIButton!
     var name = ""
     
     var image  = UIImage()
@@ -35,6 +36,7 @@ class PlayersInfoViewController: UIViewController {
             self.playerAge.setTitle("\(snapshot.value["Age"] as! Int)", forState: .Normal)
              self.playerGoals.setTitle("\(snapshot.value["Goals"] as! Int)", forState: .Normal)
              self.playerGeo.setTitle("\(snapshot.value["Country"] as! String)", forState: .Normal)
+            self.playerKit.setTitle("\(snapshot.value["Kit Number"] as! Int)", forState: .Normal)
             print(snapshot)
             print(snapshot.value["Position"])
             print(snapshot.value["Age"])
