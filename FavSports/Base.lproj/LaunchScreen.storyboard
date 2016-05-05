@@ -23,11 +23,11 @@
                                     <constraint firstAttribute="width" constant="213" id="RqZ-8P-2dZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="42"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.23018704349999999" green="0.77713233230000001" blue="0.31589496140000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="liy-X9-hQ3" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="58" id="TSk-jt-cZ6"/>
                             <constraint firstItem="liy-X9-hQ3" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="UvU-aN-gtC"/>

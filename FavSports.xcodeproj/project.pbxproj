@@ -31,6 +31,7 @@
 		69B674F21CCE92EA0071F19A /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B674F11CCE92EA0071F19A /* CreateAccountViewController.swift */; };
 		69B8F0AD1CDBC4D70060F7ED /* Manager Filled-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 69B8F0AC1CDBC4D70060F7ED /* Manager Filled-30.png */; };
 		69B8F0AF1CDBC5560060F7ED /* ManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B8F0AE1CDBC5560060F7ED /* ManagerViewController.swift */; };
+		69B8F0B11CDBE0180060F7ED /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B8F0B01CDBE0180060F7ED /* LogoutViewController.swift */; };
 		69DC88511CD9E4220037CA97 /* PlayersViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DC884E1CD9E4220037CA97 /* PlayersViewCell.swift */; };
 		69DC88521CD9E4220037CA97 /* PlayerColViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DC884F1CD9E4220037CA97 /* PlayerColViewController.swift */; };
 		69DC88531CD9E4220037CA97 /* PlayersInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DC88501CD9E4220037CA97 /* PlayersInfoViewController.swift */; };
@@ -75,6 +76,7 @@
 		69B674F11CCE92EA0071F19A /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		69B8F0AC1CDBC4D70060F7ED /* Manager Filled-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Manager Filled-30.png"; sourceTree = "<group>"; };
 		69B8F0AE1CDBC5560060F7ED /* ManagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerViewController.swift; sourceTree = "<group>"; };
+		69B8F0B01CDBE0180060F7ED /* LogoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoutViewController.swift; sourceTree = "<group>"; };
 		69DC884E1CD9E4220037CA97 /* PlayersViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersViewCell.swift; sourceTree = "<group>"; };
 		69DC884F1CD9E4220037CA97 /* PlayerColViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerColViewController.swift; sourceTree = "<group>"; };
 		69DC88501CD9E4220037CA97 /* PlayersInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersInfoViewController.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				E69D7D981CD9B1B1003DB36C /* StadiumViewController.swift */,
 				AF8087C61CDA7A9400B90FD3 /* TeamProfileViewController.swift */,
 				69B8F0AE1CDBC5560060F7ED /* ManagerViewController.swift */,
+				69B8F0B01CDBE0180060F7ED /* LogoutViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				E69D7D991CD9B1B1003DB36C /* StadiumViewController.swift in Sources */,
 				EC458D761CDBE404009C6A03 /* FixturesViewController.swift in Sources */,
 				E64351621CD8104E0041DE20 /* TeamSumViewController.swift in Sources */,
+				69B8F0B11CDBE0180060F7ED /* LogoutViewController.swift in Sources */,
 				E69D7D971CD94712003DB36C /* StatsViewController.swift in Sources */,
 				EC3D50A41CD158BD00FD20C6 /* HomeScreenViewController.swift in Sources */,
 				69DC88511CD9E4220037CA97 /* PlayersViewCell.swift in Sources */,
