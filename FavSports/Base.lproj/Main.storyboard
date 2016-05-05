@@ -563,13 +563,13 @@
                                 <exclude reference="Gic-uT-Xid"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="RY8-Jf-7Of"/>
                                 <exclude reference="O2k-Co-qko"/>
                                 <exclude reference="Rtx-4d-cn3"/>
                                 <exclude reference="X6F-u7-04A"/>
                                 <exclude reference="b4i-2E-zRR"/>
                                 <exclude reference="cyk-pW-Vf5"/>
                                 <exclude reference="N1m-xj-wGG"/>
-                                <exclude reference="RY8-Jf-7Of"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -578,13 +578,13 @@
                                 <include reference="Gic-uT-Xid"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="RY8-Jf-7Of"/>
                                 <include reference="O2k-Co-qko"/>
                                 <include reference="Rtx-4d-cn3"/>
                                 <include reference="X6F-u7-04A"/>
                                 <include reference="b4i-2E-zRR"/>
                                 <include reference="cyk-pW-Vf5"/>
                                 <include reference="N1m-xj-wGG"/>
-                                <include reference="RY8-Jf-7Of"/>
                             </mask>
                         </variation>
                     </view>

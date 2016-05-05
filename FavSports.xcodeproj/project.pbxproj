@@ -33,13 +33,6 @@
 		69DC88521CD9E4220037CA97 /* PlayerColViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DC884F1CD9E4220037CA97 /* PlayerColViewController.swift */; };
 		69DC88531CD9E4220037CA97 /* PlayersInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DC88501CD9E4220037CA97 /* PlayersInfoViewController.swift */; };
 		AF8087C71CDA7A9400B90FD3 /* TeamProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8087C61CDA7A9400B90FD3 /* TeamProfileViewController.swift */; };
-		AF8087DD1CDAE2B400B90FD3 /* Arsenal.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8087D61CDAE2B400B90FD3 /* Arsenal.png */; };
-		AF8087DE1CDAE2B400B90FD3 /* chelsea.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8087D71CDAE2B400B90FD3 /* chelsea.png */; };
-		AF8087DF1CDAE2B400B90FD3 /* Hotspur.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8087D81CDAE2B400B90FD3 /* Hotspur.png */; };
-		AF8087E01CDAE2B400B90FD3 /* LeicesterCityLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8087D91CDAE2B400B90FD3 /* LeicesterCityLogo.png */; };
-		AF8087E11CDAE2B400B90FD3 /* LiverpoolLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8087DA1CDAE2B400B90FD3 /* LiverpoolLogo.png */; };
-		AF8087E21CDAE2B400B90FD3 /* ManchesterCity.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8087DB1CDAE2B400B90FD3 /* ManchesterCity.png */; };
-		AF8087E31CDAE2B400B90FD3 /* ManchesterUnited.png in Resources */ = {isa = PBXBuildFile; fileRef = AF8087DC1CDAE2B400B90FD3 /* ManchesterUnited.png */; };
 		E64351621CD8104E0041DE20 /* TeamSumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64351611CD8104E0041DE20 /* TeamSumViewController.swift */; };
 		E662B72B1CD70AD300AF09EE /* SearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E662B72A1CD70AD300AF09EE /* SearchTable.swift */; };
 		E69D7D951CD917C2003DB36C /* FavesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69D7D941CD917C2003DB36C /* FavesViewController.swift */; };
@@ -81,13 +74,6 @@
 		69DC884F1CD9E4220037CA97 /* PlayerColViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerColViewController.swift; sourceTree = "<group>"; };
 		69DC88501CD9E4220037CA97 /* PlayersInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersInfoViewController.swift; sourceTree = "<group>"; };
 		AF8087C61CDA7A9400B90FD3 /* TeamProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamProfileViewController.swift; sourceTree = "<group>"; };
-		AF8087D61CDAE2B400B90FD3 /* Arsenal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Arsenal.png; sourceTree = "<group>"; };
-		AF8087D71CDAE2B400B90FD3 /* chelsea.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chelsea.png; sourceTree = "<group>"; };
-		AF8087D81CDAE2B400B90FD3 /* Hotspur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hotspur.png; sourceTree = "<group>"; };
-		AF8087D91CDAE2B400B90FD3 /* LeicesterCityLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LeicesterCityLogo.png; sourceTree = "<group>"; };
-		AF8087DA1CDAE2B400B90FD3 /* LiverpoolLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LiverpoolLogo.png; sourceTree = "<group>"; };
-		AF8087DB1CDAE2B400B90FD3 /* ManchesterCity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ManchesterCity.png; sourceTree = "<group>"; };
-		AF8087DC1CDAE2B400B90FD3 /* ManchesterUnited.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ManchesterUnited.png; sourceTree = "<group>"; };
 		E64351611CD8104E0041DE20 /* TeamSumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamSumViewController.swift; sourceTree = "<group>"; };
 		E662B72A1CD70AD300AF09EE /* SearchTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTable.swift; sourceTree = "<group>"; };
 		E69D7D941CD917C2003DB36C /* FavesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavesViewController.swift; sourceTree = "<group>"; };
@@ -172,13 +158,6 @@
 			isa = PBXGroup;
 			children = (
 				691CFC1A1CD5A16B007E26C2 /* Football 2 Filled-50.png */,
-				AF8087D61CDAE2B400B90FD3 /* Arsenal.png */,
-				AF8087D71CDAE2B400B90FD3 /* chelsea.png */,
-				AF8087D81CDAE2B400B90FD3 /* Hotspur.png */,
-				AF8087D91CDAE2B400B90FD3 /* LeicesterCityLogo.png */,
-				AF8087DA1CDAE2B400B90FD3 /* LiverpoolLogo.png */,
-				AF8087DB1CDAE2B400B90FD3 /* ManchesterCity.png */,
-				AF8087DC1CDAE2B400B90FD3 /* ManchesterUnited.png */,
 				691CFC1E1CD5A33F007E26C2 /* Add to Favorites Filled-30.png */,
 				691CFC201CD5A3D1007E26C2 /* Binoculars-30.png */,
 				691CFC2C1CD5E4EC007E26C2 /* Leaderboard Filled-30.png */,
@@ -288,20 +267,13 @@
 				691CFC2B1CD5E36E007E26C2 /* Football 2 Filled-30.png in Resources */,
 				691CFC231CD5A654007E26C2 /* baseball_field_grass_field_wal_2560x1600_wallpaperhi-com.jpg in Resources */,
 				691CFC1D1CD5A27C007E26C2 /* About Us Male-30.png in Resources */,
-				AF8087DF1CDAE2B400B90FD3 /* Hotspur.png in Resources */,
 				691CFC2A1CD5E36E007E26C2 /* Stadium-30.png in Resources */,
-				AF8087DE1CDAE2B400B90FD3 /* chelsea.png in Resources */,
 				691428ED1CCAEB5100AEB132 /* LaunchScreen.storyboard in Resources */,
 				691CFC2F1CD5E4EC007E26C2 /* Calendar-30.png in Resources */,
-				AF8087DD1CDAE2B400B90FD3 /* Arsenal.png in Resources */,
 				691CFC211CD5A3D1007E26C2 /* Binoculars-30.png in Resources */,
 				691428EA1CCAEB5100AEB132 /* Assets.xcassets in Resources */,
-				AF8087E11CDAE2B400B90FD3 /* LiverpoolLogo.png in Resources */,
 				691CFC291CD5E36E007E26C2 /* Football-30.png in Resources */,
-				AF8087E21CDAE2B400B90FD3 /* ManchesterCity.png in Resources */,
-				AF8087E31CDAE2B400B90FD3 /* ManchesterUnited.png in Resources */,
 				691CFC1B1CD5A16B007E26C2 /* Football 2 Filled-50.png in Resources */,
-				AF8087E01CDAE2B400B90FD3 /* LeicesterCityLogo.png in Resources */,
 				691CFC2E1CD5E4EC007E26C2 /* Leaderboard Filled-30.png in Resources */,
 				691CFC1F1CD5A33F007E26C2 /* Add to Favorites Filled-30.png in Resources */,
 				691428E81CCAEB5100AEB132 /* Main.storyboard in Resources */,
