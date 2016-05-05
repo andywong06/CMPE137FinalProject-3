@@ -16,11 +16,26 @@ class TeamProfileViewController : UIViewController{
     @IBOutlet weak var teamLogo: UIImageView!
     
     @IBOutlet weak var teamStadium: UIImageView!
+
+    
+    @IBOutlet weak var teamEstablished: UILabel!
+    
+    @IBOutlet weak var stadium: UILabel!
+    @IBOutlet weak var nickName: UILabel!
+    @IBOutlet weak var manager: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
+        let team_ref = CLUBS_REF.childByAppendingPath(SELECTED_TEAM)
+        team_ref.observeEventType(.Value, withBlock: { snapshot in
+            self.teamEstablished.text = self.teamEstablished.text! + " \(snapshot.value["Year"] as! String)"
+            self.stadium.text = self.stadium.text! + " \(snapshot.value["Stadium"] as! String)"
+            self.nickName.text = self.nickName.text! +  " \(snapshot.value["Nickname"] as! String)"
+            self.manager.text = self.manager.text! + " \(snapshot.value["Manager"] as! String)"
+            
+        })
         
         if (SELECTED_TEAM == "Arsenal"){
             teamName.text = SELECTED_TEAM
