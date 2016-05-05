@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class PlayersInfoViewController: UIViewController {
     
@@ -14,9 +15,56 @@ class PlayersInfoViewController: UIViewController {
     
     @IBOutlet weak var PlayerImage: UIImageView!
     
+    @IBOutlet weak var playerAge: UIButton!
+    
+    @IBOutlet weak var playerGeo: UIButton!
+    
+    @IBOutlet weak var playerGoals: UIButton!
+    
+    @IBOutlet weak var playerPosition: UIButton!
+    
+    var name = ""
+    
     var image  = UIImage()
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        Firebase(url: "\(PLAYERS_REF)/\(SELECTED_TEAM)/\(name)").observeEventType(.Value, withBlock: { snapshot in
+           self.playerPosition.setTitle("\(snapshot.value["Position"] as! String)", forState: .Normal)
+            self.playerAge.setTitle("\(snapshot.value["Age"] as! Int)", forState: .Normal)
+             self.playerGoals.setTitle("\(snapshot.value["Goals"] as! Int)", forState: .Normal)
+             self.playerGeo.setTitle("\(snapshot.value["Country"] as! String)", forState: .Normal)
+            print(snapshot)
+            print(snapshot.value["Position"])
+            print(snapshot.value["Age"])
+            print(snapshot.value["Goals"])
+            print(snapshot.value["Country"])
+        })
+    }
+    
+    
+        /*PLAYERS_REF.observeEventType(.Value, withBlock: { snapshot in
+            for player in snapshot.children {
+               self.playerAge = player.value["Age"] as! String
+               self.playerGeo = player.value["Country"] as! String
+                self.playerGoals = player.value["Goals"] as! String
+                self.playerPosition = player.value["Position"] as! String
+            }
+        })*/
+        
+        
+        
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
+        
+        
         
         self.PlayerImage.image = self.image
         // Do any additional setup after loading the view.
