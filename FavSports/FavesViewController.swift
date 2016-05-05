@@ -27,16 +27,22 @@ class FavesViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         initializeTeamInfo()
-        
     }
+    
+
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        var ref = FIREBASE_REF.authData
+        while (ref == nil) {
+            ref = FIREBASE_REF.authData
+        }
+        print("Firebase authdata: \(ref)")
         DELETE_STATE = false
         deleteButtton.setTitle("Delete", forState: .Normal)
         faveTeams = []
-        let uid = FIREBASE_REF.authData.uid
-        let user_ref_local = FAVES_REF.childByAppendingPath(uid)
+        CURRENT_USER_UID = FIREBASE_REF.authData.uid
+        let user_ref_local = FAVES_REF.childByAppendingPath(CURRENT_USER_UID)
         user_ref_local.observeEventType(.ChildAdded, withBlock: { snapshot in
             //var newTeams = [String]()
             let name = snapshot.key
@@ -165,23 +171,48 @@ class FavesViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func deleteTeam(team: String) {
-        USER_REF.childByAppendingPath(team).removeValue()
-        faveTeams = []
-        let uid = FIREBASE_REF.authData.uid
-        let user_ref_local = FAVES_REF.childByAppendingPath(uid)
-        user_ref_local.observeEventType(.ChildAdded, withBlock: { snapshot in
-            //var newTeams = [String]()
-            let name = snapshot.key
-            self.faveTeams.append(name)
-            
-            //self.faveTeams = newTeams
-            self.categorizedTeams = self.categorize(self.faveTeams)
-            self.tableView.reloadData()
-        })
+            USER_REF.childByAppendingPath(team).removeValue()
+            faveTeams = []
+            let uid = FIREBASE_REF.authData.uid
+            let user_ref_local = FAVES_REF.childByAppendingPath(uid)
+            user_ref_local.observeEventType(.ChildAdded, withBlock: { snapshot in
+                //var newTeams = [String]()
+                let name = snapshot.key
+                self.faveTeams.append(name)
+                
+                //self.faveTeams = newTeams
+                self.categorizedTeams = self.categorize(self.faveTeams)
+                self.tableView.reloadData()
+            })
+            if (faveTeams.count < 2) {
+                DELETE_STATE = false
+                deleteButtton.setTitle("Delete", forState: .Normal)
+            }
+        
+        
+        
 
     }
     
     @IBAction func deleteButtonAction(sender: UIButton) {
+        if (faveTeams.count < 2) {
+            var error = ""
+            if (faveTeams.count == 1) {
+                error = "You can't delete any more. You must at least have one team in Faves."
+            }
+            else {
+                error = "There are no teams in Faves to delete. You can select and add teams in Browse"
+            }
+            let alert = UIAlertController(title: "Delete Error", message: error, preferredStyle: UIAlertControllerStyle.Alert)
+            
+            // add the actions (buttons)
+            alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
+            
+            // show the alert
+            self.presentViewController(alert, animated: true, completion: nil)
+            return
+        }
+        
         if DELETE_STATE {
             DELETE_STATE = false
             sender.setTitle("Delete", forState: .Normal)

@@ -692,11 +692,17 @@
             </objects>
             <point key="canvasLocation" x="-352" y="1125"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Logout View Controller-->
         <scene sceneID="ZZi-KL-juK">
             <objects>
-                <tabBarController id="AQj-6l-iff" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="fN3-PV-vos"/>
+                <tabBarController id="AQj-6l-iff" customClass="LogoutViewController" customModule="FavSports" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="fN3-PV-vos">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="dFZ-Wq-6bz">
+                            <connections>
+                                <action selector="logoutAction:" destination="AQj-6l-iff" id="w1J-Mj-Cxm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="vtf-FU-dXU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -706,11 +712,12 @@
                     <connections>
                         <segue destination="Llz-io-2aA" kind="relationship" relationship="viewControllers" id="sFr-fS-4h3"/>
                         <segue destination="fzb-H6-Unq" kind="relationship" relationship="viewControllers" id="T4C-6a-AWP"/>
+                        <segue destination="3lW-3L-P2F" kind="presentation" identifier="showLoginLogout" id="ul7-cM-gsl"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kgX-sV-3p0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-222" y="402.75"/>
+            <point key="canvasLocation" x="-223.5" y="402.75"/>
         </scene>
         <!--PlayerCol-->
         <scene sceneID="EPw-Br-poX">
@@ -1192,7 +1199,7 @@
                     <view key="view" contentMode="scaleToFill" id="KDp-zL-G3e">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tDG-Yy-74d">
+                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tDG-Yy-74d">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <gestureRecognizers/>
                                 <connections>
@@ -1673,6 +1680,7 @@
         <image name="Stadium-30.png" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="ul7-cM-gsl"/>
         <segue reference="V57-8Z-o5J"/>
         <segue reference="WZB-6D-JA8"/>
     </inferredMetricsTieBreakers>

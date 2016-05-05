@@ -33,6 +33,7 @@ var CURRENT_USER: Firebase{ // save unique identifier for user that is logged in
     return current_user
     
 }
+
 extension UIColor {
     convenience init(red: Int, green: Int, blue: Int) {
         let newRed = CGFloat(red)/255
