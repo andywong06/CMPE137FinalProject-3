@@ -17,6 +17,10 @@ class TeamProfileViewController : UIViewController{
     
     @IBOutlet weak var teamStadium: UIImageView!
     
+    @IBOutlet weak var TeamEstablished: UILabel!
+    @IBOutlet weak var Manager: UILabel!
+    @IBOutlet weak var Nickname: UILabel!
+    @IBOutlet weak var Stadium: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
