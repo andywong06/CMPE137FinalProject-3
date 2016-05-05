@@ -10,16 +10,15 @@ import UIKit
 import Firebase
 
 class StatsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+    
     let cellIdentifier = "CellIdentifierStatMain"
     
+    @IBOutlet weak var tableView: UITableView!
     
     var categorizedTeams = [String: [String]]()
     
     var faveTeams = [String]()
-    
-    @IBOutlet weak var tableView: UITableView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -71,7 +70,7 @@ class StatsViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     //required methods for table protocol: tableView(_:cellForRowAtIndexPath:)
-    
+    var set = false;
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         //check if there was a table view already created in the reuse queue
@@ -91,6 +90,18 @@ class StatsViewController: UIViewController, UITableViewDataSource, UITableViewD
             
             // Configure Cell
             cell.textLabel?.text = team
+            if (team == SELECTED_TEAM || set) {
+                cell.textLabel?.textColor = UIColor.init(red: 22, green: 54, blue: 151)
+                set = true
+                if (set && team != SELECTED_TEAM) {
+                    set = false
+                }
+                
+            }
+            else {
+                cell.textLabel?.textColor = UIColor.whiteColor()
+            }
+            
         }
         
         
@@ -124,20 +135,29 @@ class StatsViewController: UIViewController, UITableViewDataSource, UITableViewD
     var faves = [String]()
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-
+        
+    }
+    
+    func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        
+        if let view = view as? UITableViewHeaderFooterView {
+            view.textLabel!.backgroundColor = UIColor.clearColor()
+            view.textLabel!.textColor = UIColor.whiteColor()
+        }
+        
     }
     
     
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

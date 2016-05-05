@@ -16,7 +16,7 @@ class BrowseTeamsViewController: UIViewController, UITableViewDataSource, UITabl
     var categorizedTeams = [String: [String]]()
     
     var teams = [String]()
-    
+
     @IBOutlet weak var tableView: UITableView!
     
     
@@ -32,7 +32,7 @@ class BrowseTeamsViewController: UIViewController, UITableViewDataSource, UITabl
             self.teams = newTeams
             self.categorizedTeams = self.categorize(self.teams)
             self.tableView.reloadData()
-        }) 
+        })
     }
     
     override func viewDidLoad() {
@@ -48,7 +48,7 @@ class BrowseTeamsViewController: UIViewController, UITableViewDataSource, UITabl
     
     //Number of rows per section: the number of teams that will go in each sport category
     func tableView(tableView:UITableView, numberOfRowsInSection section: Int) -> Int {
-
+        
         let keys = categorizedTeams.keys
         
         //sort keys
@@ -65,11 +65,11 @@ class BrowseTeamsViewController: UIViewController, UITableViewDataSource, UITabl
         }
         return 0
     }
-
+    
     //required methods for table protocol: tableView(_:cellForRowAtIndexPath:)
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-     
+        
         //check if there was a table view already created in the reuse queue
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath)
         
@@ -87,6 +87,7 @@ class BrowseTeamsViewController: UIViewController, UITableViewDataSource, UITabl
             
             // Configure Cell
             cell.textLabel?.text = team
+            cell.textLabel?.textColor = UIColor.whiteColor()
         }
         
         
@@ -94,7 +95,7 @@ class BrowseTeamsViewController: UIViewController, UITableViewDataSource, UITabl
     }
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
-
+        
         // Fetch and Sort Keys
         let keys = categorizedTeams.keys.sort({ (a, b) -> Bool in
             a.lowercaseString < b.lowercaseString
@@ -126,28 +127,37 @@ class BrowseTeamsViewController: UIViewController, UITableViewDataSource, UITabl
         let cell = tableView.cellForRowAtIndexPath(indexPath)!
         toggleCellCheckbox(cell, teamName: teamName)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        
+        if let view = view as? UITableViewHeaderFooterView {
+            view.textLabel!.backgroundColor = UIColor.clearColor()
+            view.textLabel!.textColor = UIColor.whiteColor()
+        }
+        
     }
     
     func toggleCellCheckbox(cell: UITableViewCell, teamName: String) {
         message = teamName
         self.performSegueWithIdentifier("showTeamSum", sender: self)
         
-//        if cell.accessoryType ==  UITableViewCellAccessoryType.Checkmark {
-//            cell.accessoryType = UITableViewCellAccessoryType.None
-//            cell.textLabel?.textColor = UIColor.blackColor()
-//            cell.detailTextLabel?.textColor = UIColor.blackColor()
-//            let i = faves.indexOf(teamName)!
-//            faves.removeAtIndex(i)
-//        } else {
-//            cell.accessoryType = UITableViewCellAccessoryType.Checkmark
-//            cell.textLabel?.textColor = UIColor.grayColor()
-//            cell.detailTextLabel?.textColor = UIColor.grayColor()
-//            faves.append(teamName)
-//        }
+        //        if cell.accessoryType ==  UITableViewCellAccessoryType.Checkmark {
+        //            cell.accessoryType = UITableViewCellAccessoryType.None
+        //            cell.textLabel?.textColor = UIColor.blackColor()
+        //            cell.detailTextLabel?.textColor = UIColor.blackColor()
+        //            let i = faves.indexOf(teamName)!
+        //            faves.removeAtIndex(i)
+        //        } else {
+        //            cell.accessoryType = UITableViewCellAccessoryType.Checkmark
+        //            cell.textLabel?.textColor = UIColor.grayColor()
+        //            cell.detailTextLabel?.textColor = UIColor.grayColor()
+        //            faves.append(teamName)
+        //        }
     }
     var message = ""
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -156,15 +166,15 @@ class BrowseTeamsViewController: UIViewController, UITableViewDataSource, UITabl
             secondVC.toRecieve = message
         }
     }
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
