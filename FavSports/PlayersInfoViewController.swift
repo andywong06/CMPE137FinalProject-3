@@ -32,16 +32,17 @@ class PlayersInfoViewController: UIViewController {
         super.viewWillAppear(animated)
         
         Firebase(url: "\(PLAYERS_REF)/\(SELECTED_TEAM)/\(name)").observeEventType(.Value, withBlock: { snapshot in
-           self.playerPosition.setTitle("\(snapshot.value["Position"] as! String)", forState: .Normal)
-            self.playerAge.setTitle("\(snapshot.value["Age"] as! Int)", forState: .Normal)
-             self.playerGoals.setTitle("\(snapshot.value["Goals"] as! Int)", forState: .Normal)
-             self.playerGeo.setTitle("\(snapshot.value["Country"] as! String)", forState: .Normal)
-            self.playerKit.setTitle("\(snapshot.value["Kit Number"] as! Int)", forState: .Normal)
             print(snapshot)
             print(snapshot.value["Position"])
             print(snapshot.value["Age"])
             print(snapshot.value["Goals"])
             print(snapshot.value["Country"])
+            print(snapshot.value["Kit"])
+           self.playerPosition.setTitle("\(snapshot.value["Position"] as! String)", forState: .Normal)
+            self.playerAge.setTitle("\(snapshot.value["Age"] as! Int)", forState: .Normal)
+             self.playerGoals.setTitle("\(snapshot.value["Goals"] as! Int)", forState: .Normal)
+             self.playerGeo.setTitle("\(snapshot.value["Country"] as! String)", forState: .Normal)
+            self.playerKit.setTitle("\(snapshot.value["Kit Number"] as! Int)", forState: .Normal)
         })
     }
     

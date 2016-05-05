@@ -22,14 +22,24 @@ class PlayerColViewController: UIViewController, UICollectionViewDelegate, UICol
     func teamselector(){
         if(SELECTED_TEAM == "Arsenal"){
             playerImageArray = [UIImage(named: "arsAR"), UIImage(named: "arsAS"), UIImage(named: "arsHB"), UIImage(named: "arsLK"),UIImage(named: "arsMO"), UIImage(named: "arsMA"), UIImage(named: "arsNM"), UIImage(named: "arsOG"), UIImage(named: "arsPM"), UIImage(named: "arsPC"), UIImage(named: "arsTW")]
-            
-            
         }
         else if(SELECTED_TEAM == "Chelsea"){
              playerImageArray = [UIImage(named: "cheBA"), UIImage(named: "cheCA"), UIImage(named: "cheCF"), UIImage(named: "cheDC"),UIImage(named: "cheEH"), UIImage(named: "cheJM"), UIImage(named: "cheJT"), UIImage(named: "cheKZ"), UIImage(named: "cheO"), UIImage(named: "cheTB"), UIImage(named: "cheW")]
         }
         else if(SELECTED_TEAM == "Leicester City"){
             playerImageArray = [UIImage(named: "lcCF"), UIImage(named: "lcDD"), UIImage(named: "lcDS"), UIImage(named: "lcV"),UIImage(named: "lcKS"), UIImage(named: "lcMA"), UIImage(named: "lcNG"), UIImage(named: "lcRM"), UIImage(named: "lcRH"), UIImage(named: "lcSO"), UIImage(named: "lcWM")]
+        }
+        else if(SELECTED_TEAM == "Liverpool"){
+            playerImageArray = [UIImage(named: "lvAM"), UIImage(named: "lvDS"), UIImage(named: "lvEC"), UIImage(named: "lvJH"),UIImage(named: "lvJM"), UIImage(named: "lvMAS"), UIImage(named: "lvMS"), UIImage(named: "lvNC"), UIImage(named: "lvPC"), UIImage(named: "lvRF"), UIImage(named: "lvSM")]
+        }
+        else if(SELECTED_TEAM == "Manchester City"){
+            playerImageArray = [UIImage(named: "mcBS"), UIImage(named: "mcDS"), UIImage(named: "mcF"), UIImage(named: "mcJN"),UIImage(named: "mcJH"), UIImage(named: "mcKB"), UIImage(named: "mcNO"), UIImage(named: "mcPZ"), UIImage(named: "mcSA"), UIImage(named: "mcVK"), UIImage(named: "mcYT")]
+        }
+        else if(SELECTED_TEAM == "Manchester United"){
+            playerImageArray = [UIImage(named: "muAM"), UIImage(named: "muCS"), UIImage(named: "muDB"), UIImage(named: "muDG"),UIImage(named: "muJM"), UIImage(named: "muMR"), UIImage(named: "muMF"), UIImage(named: "muMD"), UIImage(named: "muMC"), UIImage(named: "muPJ"), UIImage(named: "muWR")]
+        }
+        else if(SELECTED_TEAM == "Tottenham Hotspur"){
+            playerImageArray = [UIImage(named: "tBA"), UIImage(named: "tCE"), UIImage(named: "tDR"), UIImage(named: "tED"),UIImage(named: "tEL"), UIImage(named: "tHK"), UIImage(named: "tHL"), UIImage(named: "tJV"), UIImage(named: "tKW"), UIImage(named: "tMD"), UIImage(named: "tTA")]
         }
     }
     

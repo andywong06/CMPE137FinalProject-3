@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "mcSA.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "man_united_ven.jpg",
       "scale" : "2x"
     },
     {
