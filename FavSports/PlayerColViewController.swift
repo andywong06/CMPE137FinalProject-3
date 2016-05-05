@@ -45,7 +45,8 @@ class PlayerColViewController: UIViewController, UICollectionViewDelegate, UICol
     
     override func viewDidAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
+        playerCollection.backgroundColor = teamInfo[SELECTED_TEAM]?.1
+        self.view.backgroundColor = teamInfo[SELECTED_TEAM]?.1
         teamselector()
         Firebase(url: "\(PLAYERS_REF)/\(SELECTED_TEAM)").observeEventType(.Value, withBlock: { snapshot in
             var newPlayers = [String]()
@@ -88,6 +89,8 @@ class PlayerColViewController: UIViewController, UICollectionViewDelegate, UICol
         
         cell.playerName?.text = self.playerNames[indexPath.row]
         cell.playersImage?.image = self.playerImageArray[indexPath.row]
+        cell.playerName?.textColor = teamInfo[SELECTED_TEAM]?.0
+        cell.backgroundColor = teamInfo[SELECTED_TEAM]?.1
         
         
         return cell

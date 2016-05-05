@@ -34,6 +34,12 @@ class StadiumViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
+        venueTextBox.textColor = teamInfo[SELECTED_TEAM]?.0
+        addressTextBox.textColor = teamInfo[SELECTED_TEAM]?.0
+        builtLabel.textColor = teamInfo[SELECTED_TEAM]?.0
+        capacityLabel.textColor = teamInfo[SELECTED_TEAM]?.0
+        self.view.backgroundColor = teamInfo[SELECTED_TEAM]?.1
+        
         if (SELECTED_TEAM == "Arsenal") {
             imageView.image = UIImage(named: "arsenal_ven")
         }
