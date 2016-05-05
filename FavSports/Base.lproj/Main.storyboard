@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F28b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3lW-3L-P2F">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F31a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3lW-3L-P2F">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -617,7 +618,6 @@
         <!--PlayerCol-->
         <scene sceneID="EPw-Br-poX">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2jt-VC-Leq" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="PlayerCol" id="wCD-Dq-86M" customClass="PlayerColViewController" customModule="FavSports" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OgJ-4e-E6f"/>
@@ -691,6 +691,7 @@
                         <segue destination="aYA-GX-JGs" kind="show" identifier="showPlayerInfo" id="NiK-Ck-0oT"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2jt-VC-Leq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-475" y="1954"/>
         </scene>
@@ -706,7 +707,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Age" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmL-Vp-BBO">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmL-Vp-BBO">
                                 <rect key="frame" x="16" y="0.0" width="30" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="yro-K0-CVc"/>
@@ -725,13 +726,13 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" ambiguous="YES" misplaced="YES" enabled="NO" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HA6-MG-LEB">
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" enabled="NO" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HA6-MG-LEB">
                                 <rect key="frame" x="8" y="84" width="46" height="30"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Goals" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQO-0i-LRU">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goals" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQO-0i-LRU">
                                 <rect key="frame" x="0.0" y="177" width="62" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="RYh-DZ-Qtr"/>
@@ -750,7 +751,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" enabled="NO" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdx-Yj-LfD">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdx-Yj-LfD">
                                 <rect key="frame" x="8" y="260" width="46" height="30"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -775,7 +776,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" enabled="NO" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rf2-lL-5vX">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rf2-lL-5vX">
                                 <rect key="frame" x="8" y="260" width="46" height="30"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -800,7 +801,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" enabled="NO" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xGK-6i-GTW">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xGK-6i-GTW">
                                 <rect key="frame" x="8" y="260" width="46" height="30"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -864,26 +865,26 @@
                                 <exclude reference="dLe-eT-C3J"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="BCT-WJ-YUH"/>
+                                <exclude reference="dxQ-Ch-L8C"/>
+                                <exclude reference="HTw-Pz-1dQ"/>
+                                <exclude reference="eRH-qR-Diy"/>
+                                <exclude reference="sRX-0x-O1m"/>
+                                <exclude reference="TVI-o9-KQI"/>
+                                <exclude reference="a5r-8h-2i8"/>
                                 <exclude reference="BcZ-g9-lgA"/>
                                 <exclude reference="UZT-yh-rTX"/>
                                 <exclude reference="uuX-Av-XjE"/>
-                                <exclude reference="BCT-WJ-YUH"/>
-                                <exclude reference="dxQ-Ch-L8C"/>
+                                <exclude reference="N53-Yp-siQ"/>
+                                <exclude reference="cLO-S9-8mn"/>
+                                <exclude reference="nzl-Y0-SgT"/>
                                 <exclude reference="OMS-Mh-xSW"/>
                                 <exclude reference="VlQ-k4-uiu"/>
                                 <exclude reference="XOE-mm-A9g"/>
                                 <exclude reference="dc4-h9-OJi"/>
-                                <exclude reference="sRX-0x-O1m"/>
                                 <exclude reference="2KX-7m-Sqg"/>
                                 <exclude reference="B56-iv-xAv"/>
                                 <exclude reference="yct-aS-rYf"/>
-                                <exclude reference="N53-Yp-siQ"/>
-                                <exclude reference="cLO-S9-8mn"/>
-                                <exclude reference="nzl-Y0-SgT"/>
-                                <exclude reference="TVI-o9-KQI"/>
-                                <exclude reference="a5r-8h-2i8"/>
-                                <exclude reference="HTw-Pz-1dQ"/>
-                                <exclude reference="eRH-qR-Diy"/>
                                 <exclude reference="S9J-hp-7xe"/>
                             </mask>
                         </variation>
@@ -900,26 +901,26 @@
                                 <include reference="dLe-eT-C3J"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="BCT-WJ-YUH"/>
+                                <include reference="dxQ-Ch-L8C"/>
+                                <include reference="HTw-Pz-1dQ"/>
+                                <include reference="eRH-qR-Diy"/>
+                                <include reference="sRX-0x-O1m"/>
+                                <include reference="TVI-o9-KQI"/>
+                                <include reference="a5r-8h-2i8"/>
                                 <include reference="BcZ-g9-lgA"/>
                                 <include reference="UZT-yh-rTX"/>
                                 <include reference="uuX-Av-XjE"/>
-                                <include reference="BCT-WJ-YUH"/>
-                                <include reference="dxQ-Ch-L8C"/>
+                                <include reference="N53-Yp-siQ"/>
+                                <include reference="cLO-S9-8mn"/>
+                                <include reference="nzl-Y0-SgT"/>
                                 <include reference="OMS-Mh-xSW"/>
                                 <include reference="VlQ-k4-uiu"/>
                                 <include reference="XOE-mm-A9g"/>
                                 <include reference="dc4-h9-OJi"/>
-                                <include reference="sRX-0x-O1m"/>
                                 <include reference="2KX-7m-Sqg"/>
                                 <include reference="B56-iv-xAv"/>
                                 <include reference="yct-aS-rYf"/>
-                                <include reference="N53-Yp-siQ"/>
-                                <include reference="cLO-S9-8mn"/>
-                                <include reference="nzl-Y0-SgT"/>
-                                <include reference="TVI-o9-KQI"/>
-                                <include reference="a5r-8h-2i8"/>
-                                <include reference="HTw-Pz-1dQ"/>
-                                <include reference="eRH-qR-Diy"/>
                                 <include reference="S9J-hp-7xe"/>
                             </mask>
                         </variation>
