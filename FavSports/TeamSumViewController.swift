@@ -10,13 +10,14 @@ import UIKit
 
 
 
-class TeamSumViewController: UIViewController {
+class TeamSumViewController: UIViewController, UIScrollViewDelegate {
 
     private var message: String = ""
     var toRecieve: String = ""
     var teamSummary = [String: (String, String)]()
     var names = ["Arsenal", "Chelsea","Leicester City","Liverpool", "Manchester City", "Manchester United","Tottenham Hotspur"]
     
+    @IBOutlet weak var scrollView: UIScrollView!
 
     @IBOutlet weak var Name: UILabel!
    
@@ -36,7 +37,9 @@ class TeamSumViewController: UIViewController {
     @IBOutlet weak var year: UILabel!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        
         teamInfo["Arsenal"] = Arsenal
         teamInfo["Chelsea"] = Chelsea
         teamInfo["Leicester City"] = LeicesterCity
@@ -44,6 +47,10 @@ class TeamSumViewController: UIViewController {
         teamInfo["Manchester City"] = ManchesterCity
         teamInfo["Manchester United"] = ManchesterUnited
         teamInfo["Tottenham Hotspur"] = TottenhamHotspur
+        
+        self.scrollView.minimumZoomScale = 1.0
+        
+        self.scrollView.maximumZoomScale = 5.0
         
         
         message = toRecieve
@@ -87,13 +94,13 @@ class TeamSumViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+        return self.TeamLogo
+    }
     
     @IBAction func addToFaves(sender: UIButton) {
         USER_REF.childByAppendingPath(message).setValue(true)
-        
-        
-        
-        
+
     }
 
     /*
