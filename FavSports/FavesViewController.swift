@@ -33,6 +33,7 @@ class FavesViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        tableView.reloadData()
         var ref = FIREBASE_REF.authData
         while (ref == nil) {
             ref = FIREBASE_REF.authData

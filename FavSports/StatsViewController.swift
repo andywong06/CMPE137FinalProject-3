@@ -103,7 +103,13 @@ class StatsViewController: UIViewController, UITableViewDataSource, UITableViewD
                 
             }
             else {
-                cell.textLabel?.textColor = UIColor.blackColor()
+                if (SELECTED_TEAM == "Arsenal") {
+                    cell.textLabel?.textColor = UIColor.whiteColor()
+                }
+                else {
+                    cell.textLabel?.textColor = UIColor.blackColor()
+                }
+                
             }
             
         }
