@@ -45,6 +45,7 @@ class FavesViewController: UIViewController, UITableViewDataSource, UITableViewD
             self.categorizedTeams = self.categorize(self.faveTeams)
             self.tableView.reloadData()
         })
+
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -176,6 +177,7 @@ class FavesViewController: UIViewController, UITableViewDataSource, UITableViewD
             self.categorizedTeams = self.categorize(self.faveTeams)
             self.tableView.reloadData()
         })
+
     }
     
     @IBAction func deleteButtonAction(sender: UIButton) {
