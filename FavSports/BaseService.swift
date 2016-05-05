@@ -65,13 +65,13 @@ let ManUYellow = UIColor(red: 255, green: 237, blue: 65)
 //Use ArseBlue for TottBlue
 
 var teamInfo = [String: (UIColor, UIColor, String)]()
-let Arsenal = (ArseGold, ArseBlue, "Arsenal.png")
-let Chelsea = (ChelsBlue, ChelsRed, "chelsea.png")
-let LeicesterCity = (ChelsBlue, LeicYellow, "LeicesterCityLogo.png")
-let Liverpool = (LivRed, LivCyan, "LiverpoolLogo.png")
-let ManchesterCity = (ManCGold, ManCLightBlue, "ManchesterCity.png")
-let ManchesterUnited = (ChelsRed, ManUYellow, "ManchesterUnited.png")
-let TottenhamHotspur = (ArseBlue, UIColor.whiteColor(), "Hotspur.png")
+let Arsenal = (ArseGold, ArseBlue, "Arsenal")
+let Chelsea = (ChelsBlue, ChelsRed, "chelsea")
+let LeicesterCity = (ChelsBlue, LeicYellow, "LeicesterCityLogo")
+let Liverpool = (LivRed, LivCyan, "LiverpoolLogo")
+let ManchesterCity = (ManCGold, ManCLightBlue, "ManchesterCity")
+let ManchesterUnited = (ChelsRed, ManUYellow, "ManchesterUnited")
+let TottenhamHotspur = (ArseBlue, UIColor.whiteColor(), "Hotspur")
 
 var CURRENT_USER_UID: String = ""
 var SELECTED_TEAM: String = ""

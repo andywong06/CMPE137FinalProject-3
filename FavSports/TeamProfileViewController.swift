@@ -24,7 +24,7 @@ class TeamProfileViewController : UIViewController{
         
         if (SELECTED_TEAM == "Arsenal"){
             teamName.text = SELECTED_TEAM
-            teamLogo.image = UIImage (named: "arsenal")
+            teamLogo.image = UIImage (named: "Arsenal")
             teamStadium.image = UIImage (named: "arsenal_ven")
             
         }
@@ -55,7 +55,7 @@ class TeamProfileViewController : UIViewController{
         }
         else if (SELECTED_TEAM == "Tottenham Hotspur"){
             teamName.text = SELECTED_TEAM
-            teamLogo.image = UIImage (named: "hostpur")
+            teamLogo.image = UIImage (named: "Hotspur")
             teamStadium.image = UIImage (named: "tottenham_ven")
         }
        
