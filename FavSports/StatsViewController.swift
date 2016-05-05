@@ -27,6 +27,9 @@ class StatsViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
+        tableView.backgroundColor = teamInfo[SELECTED_TEAM]?.1
+        self.view.backgroundColor = teamInfo[SELECTED_TEAM]?.1
+        
         faveTeams = []
         //CLUBS_REF.queryOrderedByChild("Match Stats/Points")
         
@@ -90,8 +93,9 @@ class StatsViewController: UIViewController, UITableViewDataSource, UITableViewD
             
             // Configure Cell
             cell.textLabel?.text = team
+            cell.backgroundColor = teamInfo[SELECTED_TEAM]?.1
             if (team == SELECTED_TEAM || set) {
-                cell.textLabel?.textColor = UIColor.init(red: 22, green: 54, blue: 151)
+                cell.textLabel?.textColor = teamInfo[SELECTED_TEAM]?.0
                 set = true
                 if (set && team != SELECTED_TEAM) {
                     set = false
@@ -99,7 +103,7 @@ class StatsViewController: UIViewController, UITableViewDataSource, UITableViewD
                 
             }
             else {
-                cell.textLabel?.textColor = UIColor.whiteColor()
+                cell.textLabel?.textColor = UIColor.blackColor()
             }
             
         }

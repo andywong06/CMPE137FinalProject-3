@@ -24,12 +24,44 @@ class PlayersInfoViewController: UIViewController {
     @IBOutlet weak var playerPosition: UIButton!
     
     @IBOutlet weak var playerKit: UIButton!
+    
+    @IBOutlet weak var ageLabel: UILabel!
+    
+    @IBOutlet weak var countryLabel: UILabel!
+    
+    @IBOutlet weak var goalsLabel: UILabel!
+    
+    @IBOutlet weak var positionLabel: UILabel!
+    
+    @IBOutlet weak var kitLabel: UILabel!
+    
+    
     var name = ""
     
     var image  = UIImage()
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
+        ageLabel.textColor = teamInfo[SELECTED_TEAM]?.0
+        countryLabel.textColor = teamInfo[SELECTED_TEAM]?.0
+        goalsLabel.textColor = teamInfo[SELECTED_TEAM]?.0
+        positionLabel.textColor = teamInfo[SELECTED_TEAM]?.0
+        kitLabel.textColor = teamInfo[SELECTED_TEAM]?.0
+        playerAge.backgroundColor = teamInfo[SELECTED_TEAM]?.1
+        playerAge.tintColor = teamInfo[SELECTED_TEAM]?.0
+        playerGeo.backgroundColor = teamInfo[SELECTED_TEAM]?.1
+        playerGeo.tintColor = teamInfo[SELECTED_TEAM]?.0
+        playerGoals.backgroundColor = teamInfo[SELECTED_TEAM]?.1
+        playerGoals.tintColor = teamInfo[SELECTED_TEAM]?.0
+        playerPosition.backgroundColor = teamInfo[SELECTED_TEAM]?.1
+        playerPosition.tintColor = teamInfo[SELECTED_TEAM]?.0
+        playerAge.backgroundColor = teamInfo[SELECTED_TEAM]?.1
+        playerAge.tintColor = teamInfo[SELECTED_TEAM]?.0
+        playerKit.backgroundColor = teamInfo[SELECTED_TEAM]?.1
+        playerKit.tintColor = teamInfo[SELECTED_TEAM]?.0
+        self.view.backgroundColor = teamInfo[SELECTED_TEAM]?.1
+        
         
         Firebase(url: "\(PLAYERS_REF)/\(SELECTED_TEAM)/\(name)").observeEventType(.Value, withBlock: { snapshot in
             print(snapshot)

@@ -36,13 +36,17 @@ class PlayerColViewController: UIViewController, UICollectionViewDelegate, UICol
             playerImageArray = [UIImage(named: "mcBS"), UIImage(named: "mcDS"), UIImage(named: "mcF"), UIImage(named: "mcJN"),UIImage(named: "mcJH"), UIImage(named: "mcKB"), UIImage(named: "mcNO"), UIImage(named: "mcPZ"), UIImage(named: "mcSA"), UIImage(named: "mcVK"), UIImage(named: "mcYT")]
         }
         else if(SELECTED_TEAM == "Manchester United"){
-            playerImageArray = [UIImage(named: "muBS"), UIImage(named: "muBS"), UIImage(named: "muBS"), UIImage(named: "muBS"),UIImage(named: "muBS"), UIImage(named: "muBS"), UIImage(named: "muBS"), UIImage(named: "muBS"), UIImage(named: "muBS"), UIImage(named: "muBS"), UIImage(named: "muBS")]
+            playerImageArray = [UIImage(named: "muAM"), UIImage(named: "muCS"), UIImage(named: "muDB"), UIImage(named: "muDG"),UIImage(named: "muJM"), UIImage(named: "muMR"), UIImage(named: "muMF"), UIImage(named: "muMD"), UIImage(named: "muMC"), UIImage(named: "muPJ"), UIImage(named: "muWR")]
+        }
+        else if(SELECTED_TEAM == "Tottenham Hotspur"){
+            playerImageArray = [UIImage(named: "tBA"), UIImage(named: "tCE"), UIImage(named: "tDR"), UIImage(named: "tED"),UIImage(named: "tEL"), UIImage(named: "tHK"), UIImage(named: "tHL"), UIImage(named: "tJV"), UIImage(named: "tKW"), UIImage(named: "tMD"), UIImage(named: "tTA")]
         }
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
+        playerCollection.backgroundColor = teamInfo[SELECTED_TEAM]?.1
+        self.view.backgroundColor = teamInfo[SELECTED_TEAM]?.1
         teamselector()
         Firebase(url: "\(PLAYERS_REF)/\(SELECTED_TEAM)").observeEventType(.Value, withBlock: { snapshot in
             var newPlayers = [String]()
@@ -85,6 +89,8 @@ class PlayerColViewController: UIViewController, UICollectionViewDelegate, UICol
         
         cell.playerName?.text = self.playerNames[indexPath.row]
         cell.playersImage?.image = self.playerImageArray[indexPath.row]
+        cell.playerName?.textColor = teamInfo[SELECTED_TEAM]?.0
+        cell.backgroundColor = teamInfo[SELECTED_TEAM]?.1
         
         
         return cell

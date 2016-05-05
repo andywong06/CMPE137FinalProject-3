@@ -28,6 +28,13 @@ class TeamProfileViewController : UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
     
+        teamName.textColor = teamInfo[SELECTED_TEAM]?.0
+        stadium.textColor = teamInfo[SELECTED_TEAM]?.0
+        nickName.textColor = teamInfo[SELECTED_TEAM]?.0
+        manager.textColor = teamInfo[SELECTED_TEAM]?.0
+        teamEstablished.textColor = teamInfo[SELECTED_TEAM]?.0
+        self.view.backgroundColor = teamInfo[SELECTED_TEAM]?.1
+        
         let team_ref = CLUBS_REF.childByAppendingPath(SELECTED_TEAM)
         team_ref.observeEventType(.Value, withBlock: { snapshot in
             self.teamEstablished.text = self.teamEstablished.text! + " \(snapshot.value["Year"] as! String)"
