@@ -40,13 +40,6 @@ class TeamSumViewController: UIViewController, UIScrollViewDelegate {
         
         super.viewDidLoad()
         
-        teamInfo["Arsenal"] = Arsenal
-        teamInfo["Chelsea"] = Chelsea
-        teamInfo["Leicester City"] = LeicesterCity
-        teamInfo["Liverpool"] = Liverpool
-        teamInfo["Manchester City"] = ManchesterCity
-        teamInfo["Manchester United"] = ManchesterUnited
-        teamInfo["Tottenham Hotspur"] = TottenhamHotspur
         
         self.scrollView.minimumZoomScale = 1.0
         

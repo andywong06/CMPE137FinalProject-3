@@ -74,6 +74,19 @@ let ManchesterCity = (ManCGold, ManCLightBlue, "ManchesterCity")
 let ManchesterUnited = (ChelsRed, ManUYellow, "ManchesterUnited")
 let TottenhamHotspur = (ArseBlue, UIColor.whiteColor(), "Hotspur")
 
+
+    func initializeTeamInfo()
+    {
+        teamInfo["Arsenal"] = Arsenal
+        teamInfo["Chelsea"] = Chelsea
+        teamInfo["Leicester City"] = LeicesterCity
+        teamInfo["Liverpool"] = Liverpool
+        teamInfo["Manchester City"] = ManchesterCity
+        teamInfo["Manchester United"] = ManchesterUnited
+        teamInfo["Tottenham Hotspur"] = TottenhamHotspur        
+}
+
+
 var CURRENT_USER_UID: String = ""
 var SELECTED_TEAM: String = ""
 

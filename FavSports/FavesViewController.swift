@@ -26,6 +26,7 @@ class FavesViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initializeTeamInfo()
         
     }
     
