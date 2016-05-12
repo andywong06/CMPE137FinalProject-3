@@ -43,6 +43,8 @@ class FavesViewController: UIViewController, UITableViewDataSource, UITableViewD
         deleteButtton.setTitle("Delete", forState: .Normal)
         faveTeams = []
         CURRENT_USER_UID = FIREBASE_REF.authData.uid
+        USER_REF = FAVES_REF.childByAppendingPath(CURRENT_USER_UID)
+        print(CURRENT_USER_UID)
         let user_ref_local = FAVES_REF.childByAppendingPath(CURRENT_USER_UID)
         user_ref_local.observeEventType(.ChildAdded, withBlock: { snapshot in
             //var newTeams = [String]()

@@ -802,11 +802,6 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </tabBar>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                            <color key="value" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="Llz-io-2aA" kind="relationship" relationship="viewControllers" id="sFr-fS-4h3"/>
                         <segue destination="fzb-H6-Unq" kind="relationship" relationship="viewControllers" id="T4C-6a-AWP"/>
@@ -1787,7 +1782,7 @@
         <image name="Stadium-30.png" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ss3-eB-mX5"/>
+        <segue reference="ul7-cM-gsl"/>
         <segue reference="FrV-qn-Y0a"/>
         <segue reference="4gp-1f-tTu"/>
     </inferredMetricsTieBreakers>
