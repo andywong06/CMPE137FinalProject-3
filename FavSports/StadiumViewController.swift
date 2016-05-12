@@ -13,10 +13,11 @@ class StadiumViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     
-    @IBOutlet weak var venueTextBox: UITextView!
     
-    @IBOutlet weak var addressTextBox: UITextView!
     
+    @IBOutlet weak var venueTextBox: UILabel!
+        
+    @IBOutlet weak var addressTextBox: UILabel!
     @IBOutlet weak var builtLabel: UILabel!
     
     @IBOutlet weak var capacityLabel: UILabel!

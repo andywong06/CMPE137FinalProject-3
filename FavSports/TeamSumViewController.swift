@@ -93,6 +93,10 @@ class TeamSumViewController: UIViewController, UIScrollViewDelegate {
     
     @IBAction func addToFaves(sender: UIButton) {
         USER_REF.childByAppendingPath(message).setValue(true)
+        let alert = UIAlertController(title: "Add To Favs", message: "Added team to your Favs", preferredStyle: .Alert)
+        let action = UIAlertAction(title: "Great!!!", style: .Default, handler: nil)
+        alert.addAction(action)
+        self.presentViewController(alert, animated: true, completion: nil)
 
     }
 

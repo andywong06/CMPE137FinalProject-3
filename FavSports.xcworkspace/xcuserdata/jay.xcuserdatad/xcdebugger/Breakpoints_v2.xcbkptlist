@@ -19,5 +19,161 @@
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FavSports/StadiumViewController.swift"
+            timestampString = "484722749.232211"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "StadiumViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FavSports.StadiumViewController.venueTextBox.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UITextView&gt;"
+                  moduleName = "FavSports"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jay/Documents/C137AW/CMPE137FinalProject-3/FavSports/StadiumViewController.swift"
+                  timestampString = "484722749.87542"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "27">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FavSports.StadiumViewController.venueTextBox.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UITextView&gt;"
+                  moduleName = "FavSports"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jay/Documents/C137AW/CMPE137FinalProject-3/FavSports/StadiumViewController.swift"
+                  timestampString = "484722749.877214"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "42">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FavSports.StadiumViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; FavSports.StadiumViewController"
+                  moduleName = "FavSports"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jay/Documents/C137AW/CMPE137FinalProject-3/FavSports/StadiumViewController.swift"
+                  timestampString = "484722749.877402"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "162">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FavSports.StadiumViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;FavSports.StadiumViewController&gt;"
+                  moduleName = "FavSports"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jay/Documents/C137AW/CMPE137FinalProject-3/FavSports/StadiumViewController.swift"
+                  timestampString = "484722749.877531"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "88">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FavSports/StadiumViewController.swift"
+            timestampString = "484722897.578925"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "StadiumViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FavSports.StadiumViewController.venueTextBox.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UITextView&gt;"
+                  moduleName = "FavSports"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jay/Documents/C137AW/CMPE137FinalProject-3/FavSports/StadiumViewController.swift"
+                  timestampString = "484722749.89266"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "27">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FavSports.StadiumViewController.venueTextBox.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UITextView&gt;"
+                  moduleName = "FavSports"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jay/Documents/C137AW/CMPE137FinalProject-3/FavSports/StadiumViewController.swift"
+                  timestampString = "484722749.892812"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "42">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FavSports.StadiumViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; FavSports.StadiumViewController"
+                  moduleName = "FavSports"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jay/Documents/C137AW/CMPE137FinalProject-3/FavSports/StadiumViewController.swift"
+                  timestampString = "484722749.892936"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "162">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FavSports.StadiumViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;FavSports.StadiumViewController&gt;"
+                  moduleName = "FavSports"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jay/Documents/C137AW/CMPE137FinalProject-3/FavSports/StadiumViewController.swift"
+                  timestampString = "484722749.893049"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "88">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

@@ -26,6 +26,7 @@
 		691CFC2E1CD5E4EC007E26C2 /* Leaderboard Filled-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 691CFC2C1CD5E4EC007E26C2 /* Leaderboard Filled-30.png */; };
 		691CFC2F1CD5E4EC007E26C2 /* Calendar-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 691CFC2D1CD5E4EC007E26C2 /* Calendar-30.png */; };
 		69203FC71CD82318009A9B18 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69203FC61CD82318009A9B18 /* MyProfileViewController.swift */; };
+		696CE0C61CE469B600D2CC20 /* TabBarmoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696CE0C51CE469B600D2CC20 /* TabBarmoreViewController.swift */; };
 		69B674EE1CCE90F70071F19A /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B674ED1CCE90F70071F19A /* BaseService.swift */; };
 		69B674F01CCE92D70071F19A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B674EF1CCE92D70071F19A /* LoginViewController.swift */; };
 		69B674F21CCE92EA0071F19A /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B674F11CCE92EA0071F19A /* CreateAccountViewController.swift */; };
@@ -71,6 +72,7 @@
 		691CFC2C1CD5E4EC007E26C2 /* Leaderboard Filled-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Leaderboard Filled-30.png"; sourceTree = "<group>"; };
 		691CFC2D1CD5E4EC007E26C2 /* Calendar-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Calendar-30.png"; sourceTree = "<group>"; };
 		69203FC61CD82318009A9B18 /* MyProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
+		696CE0C51CE469B600D2CC20 /* TabBarmoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarmoreViewController.swift; sourceTree = "<group>"; };
 		69B674ED1CCE90F70071F19A /* BaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		69B674EF1CCE92D70071F19A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		69B674F11CCE92EA0071F19A /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				AF8087C61CDA7A9400B90FD3 /* TeamProfileViewController.swift */,
 				69B8F0AE1CDBC5560060F7ED /* ManagerViewController.swift */,
 				69B8F0B01CDBE0180060F7ED /* LogoutViewController.swift */,
+				696CE0C51CE469B600D2CC20 /* TabBarmoreViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				TargetAttributes = {
 					691428DE1CCAEB5100AEB132 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = WR86LM5SLP;
 					};
 				};
 			};
@@ -355,6 +359,7 @@
 				69B674F21CCE92EA0071F19A /* CreateAccountViewController.swift in Sources */,
 				69DC88531CD9E4220037CA97 /* PlayersInfoViewController.swift in Sources */,
 				E662B72B1CD70AD300AF09EE /* SearchTable.swift in Sources */,
+				696CE0C61CE469B600D2CC20 /* TabBarmoreViewController.swift in Sources */,
 				69B674F01CCE92D70071F19A /* LoginViewController.swift in Sources */,
 				691428E31CCAEB5100AEB132 /* AppDelegate.swift in Sources */,
 				EC3D50A61CD1A8FD00FD20C6 /* BrowseTeamsViewController.swift in Sources */,
@@ -483,6 +488,8 @@
 			baseConfigurationReference = F64F6452DEE3FD800425119C /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -493,6 +500,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.team9.team.FavSports;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -501,6 +509,8 @@
 			baseConfigurationReference = 022C2004D28569BFF2C5892D /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -511,6 +521,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.team9.team.FavSports;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

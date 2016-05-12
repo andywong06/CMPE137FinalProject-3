@@ -122,19 +122,19 @@ class FavesViewController: UIViewController, UITableViewDataSource, UITableViewD
     private func categorize(array: [String]) -> [String: [String]] {
         var result = [String: [String]]()
         for item in array{
-            if result["Faves"] != nil{
-                result["Faves"]!.append(item)
+            if result["Favs"] != nil{
+                result["Favs"]!.append(item)
                 
             }
             else{
-                result["Faves"] = [item]
+                result["Favs"] = [item]
             }
         }
         return result
     }
     
     
-    var faves = [String]()
+    var favs = [String]()
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         var teamName : String
@@ -156,7 +156,7 @@ class FavesViewController: UIViewController, UITableViewDataSource, UITableViewD
     var message:String = ""
     func toggleCellCheckbox(cell: UITableViewCell, teamName: String) {
         if (DELETE_STATE) {
-            let alert = UIAlertController(title: "Delete", message: "Are you sure you want to delete \(teamName) from Faves?", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController(title: "Delete", message: "Are you sure you want to delete \(teamName) from Favs?", preferredStyle: UIAlertControllerStyle.Alert)
             
             // add the actions (buttons)
             alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.Default, handler: {action in self.deleteTeam(teamName)}))
@@ -199,10 +199,10 @@ class FavesViewController: UIViewController, UITableViewDataSource, UITableViewD
         if (faveTeams.count < 2) {
             var error = ""
             if (faveTeams.count == 1) {
-                error = "You can't delete any more. You must at least have one team in Faves."
+                error = "You can't delete any more. You must at least have one team in Favs."
             }
             else {
-                error = "There are no teams in Faves to delete. You can select and add teams in Browse"
+                error = "There are no teams in Favs to delete. You can select and add teams in Browse"
             }
             let alert = UIAlertController(title: "Delete Error", message: error, preferredStyle: UIAlertControllerStyle.Alert)
             

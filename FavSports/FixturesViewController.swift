@@ -25,16 +25,18 @@ class FixturesViewController: UIViewController, UITableViewDataSource, UITableVi
         if lastSix.isEmpty {
 
         FIXTURE_REF.observeEventType(.Value, withBlock: { snapshot in
+            self.lastSix = []
+            self.upcomingGames = []
             let team = snapshot.childSnapshotForPath(SELECTED_TEAM)
             let previousGames = team.childSnapshotForPath("Last 6")
             for match in previousGames.children {
-                 let gameInfo = "Date: \(match.value["Date"] as! String)        Score: \(match.value["Score"] as! String)                   Opponent: \(match.value["Team Against"] as! String)"
+                 let gameInfo = "Date: \(match.value["Date"] as! String)        Score: \(match.value["Score"] as! String)\nOpponent: \(match.value["Team Against"] as! String)"
                     self.lastSix.append(gameInfo)
                 }
             let upcomingGames = team.childSnapshotForPath("Next 6")
             
             for match in upcomingGames.children {
-                let gameInfo = "Date: \(match.value["Date"] as! String)     Score: \(match.value["Score"] as! String)                    Opponent: \(match.value["Team Against"] as! String)"
+                let gameInfo = "Date: \(match.value["Date"] as! String)     Score: \(match.value["Score"] as! String)\nOpponent: \(match.value["Team Against"] as! String)"
                 self.upcomingGames.append(gameInfo)
             }
 
@@ -75,7 +77,6 @@ class FixturesViewController: UIViewController, UITableViewDataSource, UITableVi
         else {
             game = upcomingGames[indexPath.row]
         }
-        
         cell.textLabel?.text = game
         cell.textLabel?.textColor = teamInfo[SELECTED_TEAM]?.0
         cell.textLabel?.numberOfLines = 0

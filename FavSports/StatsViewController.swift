@@ -34,11 +34,12 @@ class StatsViewController: UIViewController, UITableViewDataSource, UITableViewD
         //CLUBS_REF.queryOrderedByChild("Match Stats/Points")
         
         CLUBS_REF.queryOrderedByChild("Match Stats/Points").observeEventType(.Value, withBlock: { snapshot in
+            
+            self.faveTeams = []
             for item in (snapshot.children).reverse() {
                 let child = item.childSnapshotForPath("Match Stats")
                 let stats = "P: \(child.value["Played"] as! Int)    | W: \(child.value["Won"] as! Int) | D: \(child.value["Drawn"] as! Int) | L: \(child.value["Lost"] as! Int) |     Pts: \(child.value["Points"] as! Int)"
-                self.faveTeams.append(item.key)
-                self.faveTeams.append(stats)
+                self.faveTeams.append("\(item.key)\n\(stats)")
                 self.categorizedTeams = self.categorize(self.faveTeams)
                 self.tableView.reloadData()
             }
@@ -92,15 +93,11 @@ class StatsViewController: UIViewController, UITableViewDataSource, UITableViewD
             let team = teams[indexPath.row]
             
             // Configure Cell
+            cell.textLabel?.numberOfLines = 2
             cell.textLabel?.text = team
             cell.backgroundColor = teamInfo[SELECTED_TEAM]?.1
-            if (team == SELECTED_TEAM || set) {
+            if (team.containsString(SELECTED_TEAM)) {
                 cell.textLabel?.textColor = teamInfo[SELECTED_TEAM]?.0
-                set = true
-                if (set && team != SELECTED_TEAM) {
-                    set = false
-                }
-                
             }
             else {
                 if (SELECTED_TEAM == "Arsenal") {
@@ -152,7 +149,7 @@ class StatsViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         if let view = view as? UITableViewHeaderFooterView {
             view.textLabel!.backgroundColor = UIColor.clearColor()
-            view.textLabel!.textColor = UIColor.whiteColor()
+            view.textLabel!.textColor = UIColor.blackColor()
         }
         
     }
